@@ -1,7 +1,18 @@
-.menuList li a{
+.menuList{
+    list-style: none;
+}
+.menuList li{
     padding: 10px;
+    /* border-bottom: 1px solid #e6e3f1; */
+}
+.menuList li a{
     text-decoration: none;
     color: #000;
     font: 500 14px /1.5 var(--font4);
-    border-bottom: 1px solid #e6e3f1;
+}
+.card-help{
+    padding: 15px;
+    background: #fff;
+    border: 1px solid var(--borderColor);
+    border-radius: 12px;
 }

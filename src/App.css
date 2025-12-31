@@ -1,1 +1,22 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --bg1: #F5F5F5;
+    --font1: "Roboto", sans-serif;
+    --borderColor: rgb(228 228 232);
+}
+.dashboard{
+    border-radius: 12px;
+    border: 1px solid var(--borderColor);
+    background: var(--bg1);
+    overflow: hidden;
+}
+.sidebar-title{
+    font: 600 15px / 1.1 var(--font1);
+    padding: 16px;
+    border-bottom: 1px solid var(--borderColor);
+    text-transform: uppercase;
+    border-bottom: 1px solid #e6e3f1;
+}
+.dashboardContent{
+    border-left: 1px solid var(--borderColor);
+}
