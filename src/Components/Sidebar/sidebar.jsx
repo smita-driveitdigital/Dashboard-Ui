@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, href, Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 import { UserRound, Handshake, CalendarRange, Bookmark } from 'lucide-react';
 import './sidebar.css'
 export default function Sidebar() {
@@ -58,7 +58,7 @@ export default function Sidebar() {
     return (
         <div className="sidebar">
             <aside>
-                <BrowserRouter>
+                <div>
                     <h1 className="sidebar-title font-bold">The Asian banker</h1>
                     <ul className="menuList ps-0">
                         {SidebarItem.map((item, index) => {
@@ -70,13 +70,13 @@ export default function Sidebar() {
                         })}
                         <li>
                             <div className="card-help">
-                        <h4>Need Help?</h4>
+                        <h5>Need Help?</h5>
                         <p className="mb-0"><a href="/">Visit our Help Center</a> or <a href="/">Contact us</a>.</p>
                     </div>
                         </li>
                     </ul>
                     
-                </BrowserRouter >
+                </div>
             </aside>
         </div>
     )

@@ -3,12 +3,13 @@ import { Container, Row, Col } from 'reactstrap';
 
 import Sidebar from './Components/Sidebar/sidebar';
 import DashboardMain from './Components/DashboardMain/dashboardMain';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
 
 
   return (
-    <>
+    <BrowserRouter>
       <Container className='dashboard'>
         <Row>
           <Col className='p-0' lg="2" sm="12" md="3">
@@ -19,7 +20,7 @@ function App() {
           </Col>
         </Row>
       </Container>
-    </>
+    </BrowserRouter>
   )
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, FormGroup, Input, Label, Row } from 'reactstrap';
-import "./userform.css"
+import './userForm.css';
 
 export default function UserForm() {
     return (
