@@ -1,0 +1,7 @@
+.menuList li a{
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    font: 500 14px /1.5 var(--font4);
+    border-bottom: 1px solid #e6e3f1;
+}
