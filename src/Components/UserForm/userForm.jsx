@@ -1,12 +1,14 @@
-import React from 'react'
-import { Col, FormGroup, Input, Label, Row } from 'reactstrap'
+import React from 'react';
+import { Col, FormGroup, Input, Label, Row } from 'reactstrap';
+import "./userform.css"
 
 export default function UserForm() {
     return (
-        <div className='userform'>
+        <div className='dashboardInner'>
+            <div className='userform'>
             <form>
                 <Row>
-                    <Col>
+                    <Col lg={2} md={6} sm={12}>
                         <FormGroup>
                             <Label>Salutation</Label>
                             <Input type='select'>
@@ -20,19 +22,19 @@ export default function UserForm() {
                         </FormGroup>
                     </Col>
                     <Col lg={4} md={6} sm={12}>
-                        <FormGroup className='form-group'>
+                        <FormGroup className=''>
                             <Label>Full Name</Label>
-                            <Input className='form-control' type='text' />
+                            <Input className='' type='text' />
                         </FormGroup>
                     </Col>
-                    <Col lg={4} md={6} sm={12}>
-                        <FormGroup className='form-group'>
+                    <Col lg={3} md={6} sm={12}>
+                        <FormGroup className=''>
                             <Label>Email</Label>
-                            <Input className='form-control' type='text' />
+                            <Input className='' type='email' />
                         </FormGroup>
                     </Col>
-                    <Col lg={4} md={6} sm={12}>
-                        <FormGroup className='form-group'>
+                    <Col lg={3} md={6} sm={12}>
+                        <FormGroup className=''>
                             <Label>Country</Label>
                             <Input type='select'>
                                 <option>India</option>
@@ -44,14 +46,33 @@ export default function UserForm() {
                             </Input>
                         </FormGroup>
                     </Col>
-                    <Col lg={4} md={6} sm={12}>
-                        <FormGroup className='form-group'>
-                            <Label>First Name</Label>
-                            <Input className='form-control' type='text' />
+                    <Col lg={3} md={6} sm={12}>
+                        <FormGroup className=''>
+                            <Label>Phone No.</Label>
+                            <Input className='' type='tel' />
+                        </FormGroup>
+                    </Col>
+                    <Col lg={3} md={6} sm={12}>
+                        <FormGroup className=''>
+                            <Label>LinkedIn Profile URL</Label>
+                            <Input className='' type='text' />
+                        </FormGroup>
+                    </Col>
+                    <Col lg={3} md={6} sm={12}>
+                        <FormGroup className=''>
+                            <Label>Facebook Profile URL</Label>
+                            <Input className='' type='text' />
+                        </FormGroup>
+                    </Col>
+                    <Col lg={3} md={6} sm={12}>
+                        <FormGroup className=''>
+                            <Label>Twitter Profile URL</Label>
+                            <Input className='' type='text' />
                         </FormGroup>
                     </Col>
                 </Row>
             </form>
+        </div>
         </div>
     )
 }
