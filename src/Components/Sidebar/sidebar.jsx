@@ -2,69 +2,79 @@ import React from "react";
 import {Link } from "react-router-dom";
 import { UserRound, Handshake, CalendarRange, Bookmark } from 'lucide-react';
 import './sidebar.css'
-export default function Sidebar() {
+export default function Sidebar({ activePage, setActivePage }) {
     const SidebarItem = [
         {
+            id: "my-account",
             icon: UserRound,
-            label: "Dashboard",
+            label: "My Account",
             href: "/"
         },
         {
+            id: "contribution",
             icon: Handshake,
             label: "Contribution",
             href: "/",
         },
         {
+            id: "attend-events",
             icon: CalendarRange,
             label: "Attend Events",
             href: "/",
         },
         {
+            id: "bookmarks",
             icon: Bookmark,
             label: "Bookmarks",
             href: "/",
         },
         {
+            id: "following",
             icon: Bookmark,
             label: "Following",
             href: '/',
         },
         {
+            id: "newsletters",
             icon: Bookmark,
             label: "Newsletters",
             href: '/',
         },
         {
+            id: "edit-profile",
             icon: Bookmark,
             label: "Edit Profile",
             href: '/',
         },
         {
+            id: "change-password",
             icon: Bookmark,
             label: 'Change Password',
             href: '/',
         },
         {
+            id: "contact-us",
             icon: Bookmark,
             label: 'Contact Us',
             href: '/',
         },
         {
+            id: "logout",
             icon: Bookmark,
             label: 'Logout',
             href:'/',
         }
     ]
     return (
-        <div className="sidebar">
+        <div className="sidebar"> 
             <aside>
                 <div>
                     <h1 className="sidebar-title font-bold">The Asian banker</h1>
                     <ul className="menuList ps-0">
                         {SidebarItem.map((item, index) => {
                             return (
-                                <li key={index} className="">
-                                    <Link to={item.href} className="d-flex align-items-center"><item.icon className="d-flex h-5 w-5 flex-shrink-0 me-2" size={20} />{item.label}</Link>
+                                <li key={index} className={activePage === item.id ? "active" : ""} onClick={() => setActivePage(item.id)}>
+                                    <div className="d-flex align-items-center"><item.icon className="d-flex h-5 w-5 flex-shrink-0 me-2" size={20} />{item.label}</div>
                                 </li>
                             )
                         })}
