@@ -21,9 +21,9 @@ export default function DashboardMain({ activePage }) {
     <div className='dashboardContent bg-white h-100'>
       <main>
         <div>
-            <h1 className="sidebar-title font-bold">Dashboard Content</h1>
+            <h1 className="sidebar-title font-bold mb-0">Dashboard Content</h1>
         </div>
-        <div className="content">
+        <div className="content p-4">
       {renderContent()}
     </div>
       </main>
